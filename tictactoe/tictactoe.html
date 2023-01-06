@@ -64,7 +64,7 @@
 
       // Add event listeners to the squares
       square.forEach(([x, y]) => {
-        var square = this.add.sprite(x * squareSize, y * squareSize, 'board');
+        var square = this.add.sprite(x * squareSize, y * squareSize, 'square');
         square.setInteractive();
         square.on('pointerdown', () => {
           if (!gameOver && !square.texture.key) {
