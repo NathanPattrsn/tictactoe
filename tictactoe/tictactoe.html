@@ -99,10 +99,7 @@
               // If the player has won, announce their victory
               gameOver = true;
               this.add.text(300, 300, `${turn} wins!`, { fontSize: '64px' }).setOrigin(0.5);
-            } else if (checkVictory(square.x, square.y)){
-              gameOver = true;
-              this.add.text(300, 300, `${computer} wins!`, { fontSize: '64px' }).setOrigin(0.5);
-            }
+            } 
               else if (checkTie()) {
               // If there is a tie, announce the tie
               gameOver = true;
