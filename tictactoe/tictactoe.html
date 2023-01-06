@@ -63,7 +63,7 @@
 
 
       // Add event listeners to the squares
-      square.forEach(([x, y]) => {
+      squares.forEach(([x, y]) => {
         const square = this.add.sprite(x * squareSize, y * squareSize, 'square');
         square.setInteractive();
         square.on('pointerdown', () => {
@@ -72,7 +72,7 @@
             square.setTexture(turn);
            
             // Check if the player has won
-            if (checkVictory(square.x, square.y)) {
+            if (checkVictory(x, y)) {
               // If the player has won, announce their victory
               gameOver = true;
               this.add.text(300, 300, `${turn} wins!`, { fontSize: '64px' }).setOrigin(0.5);
