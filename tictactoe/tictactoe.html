@@ -61,7 +61,7 @@
       
         // Set up a timer to trigger an automated response
   this.time.addEvent({
-    delay: 1000, // Wait 1 second before triggering the response
+    delay: 3000, // Wait 1 second before triggering the response
     callback: () => {
       // Check if the game is over or if it's not the computer's turn
       if (gameOver || turn !== 'O') {
@@ -83,7 +83,7 @@
       square.setTexture('O');
 
       // Add event listeners to the squares
-      squares.forEach(([x, y]) => {
+      square.forEach(([x, y]) => {
         var square = this.add.sprite(x * squareSize, y * squareSize, 'square');
         square.setInteractive();
         square.on('pointerdown', () => {
@@ -92,14 +92,18 @@
             square.setTexture(turn);
             
             // Check if the computer has won
-            if (checkVictory(square.x, square.y
+            if (checkVictory(square.x, square.y))
                              
             // Check if the player has won
             if (checkVictory(square.x, square.y)) {
               // If the player has won, announce their victory
               gameOver = true;
               this.add.text(300, 300, `${turn} wins!`, { fontSize: '64px' }).setOrigin(0.5);
-            } else if (checkTie()) {
+            } else if (checkVictory(square.x, square.y)){
+              gameOver = true;
+              this.add.text(300, 300, `${computer} wins!`, { fontSize: '64px' }).setOrigin(0.5);
+            }
+              else if (checkTie()) {
               // If there is a tie, announce the tie
               gameOver = true;
               this.add.text(300, 300, 'Tie!', { fontSize: '64px' }).setOrigin(0.5);
