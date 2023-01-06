@@ -16,8 +16,8 @@
     // Set up the game configuration
     var config = {
       type: Phaser.AUTO,
-      width: 900,
-      height: 900,
+      width: 600,
+      height: 600,
       scene: {
         preload: preload,
         create: create
@@ -43,7 +43,7 @@
     // Set up the game board and add event listeners to the squares
     function create() {
       // Create the board sprite
-      this.add.sprite(300, 300, 'board');
+      this.add.sprite(400, 400, 'board');
 
       // Set up the squares
       const squareSize = 200;
