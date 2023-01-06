@@ -63,10 +63,13 @@
       squares.forEach(([x, y]) => {
         const square = this.add.sprite(x * squareSize, y * squareSize, 'square');
         square.setInteractive();
+        square.setZ(1); 
         square.on('pointerdown', () => {
           if (!gameOver && !square.texture.key) {
             // Place the player's symbol on the square
             square.setTexture(turn);
+            
+            board.setZ(0);
            
             // Check if the player has won
             if (checkVictory(x, y)) {
