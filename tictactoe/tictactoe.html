@@ -58,6 +58,29 @@
         [2, 3],
         [3, 3],
       ];
+      
+        // Set up a timer to trigger an automated response
+  this.time.addEvent({
+    delay: 1000, // Wait 1 second before triggering the response
+    callback: () => {
+      // Check if the game is over or if it's not the computer's turn
+      if (gameOver || turn !== 'O') {
+        return;
+      }
+
+      // Find an empty square to place the computer's symbol
+      let square;
+      for (let i = 0; i < 3; i++) {
+        for (let j = 0; j < 3; j++) {
+          if (!board[i][j].texture.key) {
+            square = board[i][j];
+            break;
+          }
+        }
+      }
+
+      // Place the computer's symbol on the square
+      square.setTexture('O');
 
       // Add event listeners to the squares
       squares.forEach(([x, y]) => {
@@ -67,9 +90,12 @@
           if (!gameOver && !square.texture.key) {
             // Place the player's symbol on the square
             square.setTexture(turn);
-
+            
+            // Check if the computer has won
+            if (checkVictory(square.x, square.y
+                             
             // Check if the player has won
-            if (checkVictory(x, y)) {
+            if (checkVictory(square.x, square.y)) {
               // If the player has won, announce their victory
               gameOver = true;
               this.add.text(300, 300, `${turn} wins!`, { fontSize: '64px' }).setOrigin(0.5);
