@@ -46,7 +46,7 @@
       this.add.sprite(400, 400, 'board');
 
       // Set up the squares
-      const squareSize = 200;
+      const squareSize = 400;
       const squares = [
         [1, 1],
         [2, 1],
@@ -62,14 +62,22 @@
 
 
 
-      // Add event listeners to the squares
-      squares.forEach(([x, y]) => {
-        const square = this.add.sprite(x * squareSize, y * squareSize, 'square');
-        square.setInteractive();
-        square.on('pointerdown', () => {
-          if (!gameOver && !square.texture.key) {
-            // Place the player's symbol on the square
-            square.setTexture(turn);
+          // Set up the squares and add event listeners to them
+squares.forEach(([x, y]) => {
+  const square = this.add.sprite(x * squareSize, y * squareSize, 'square');
+  square.setInteractive();
+  square.on('pointerdown', () => {
+    if (!gameOver && !square.texture.key) {
+      // Place the player's symbol on the square
+      placeSymbol(square, x, y);
+    }
+  });
+});
+
+// Place the player's symbol on the square and check if they have won
+function placeSymbol(square, x, y) {
+  // Place the player's symbol on the square
+  square.setTexture(turn);
            
             // Check if the player has won
             if (checkVictory(x, y)) {
@@ -84,11 +92,7 @@
             } else {
               // If the game is not over, switch turns
               turn = turn === 'X' ? 'O' : 'X';
-            }
-          }
-        })
-      })
-    }
+            }}}
   </script>
   </body>
 </html>
