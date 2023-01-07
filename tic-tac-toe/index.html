@@ -1,0 +1,45 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, inital-scale=1.0">
+        <link rel="stylesheet" href="style.css"> <!-- Linking style of page to stylesheet-->
+        <link rel="preconnect" href="https://fonts.gstatic.com"> <!-- Linking fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet"> <!-- Linking fonts-->
+        <script src="./index.js"></script> <!-- Linking our game-->
+        <title>Tic-Tac-Toe - Player vs Player</title> <!-- Page title is set-->
+    </head>
+    <body>
+        <main class="background"> <!-- Page heading is set-->
+            <section class="title">
+                <h1>Tic Tac Toe - Player vs Player</h1>
+            </section>
+            <section class="display"> <!-- Webpage section is set so we can select what text appears there and how-->
+                Player <span class="display-player playerX">X</span>'s turn
+            </section>
+            <section class="container"> <!-- Tic tac toe grid is created-->
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </section>
+            <section class="display announcer hide"></section> <!-- This is the section which the winner is announced-->
+            <section class="controls"> <!-- This is the section where any buttons are added-->
+                <button id="reset">Reset</button>
+                <button id="reset-score">Reset Scoreboard</button>
+                <a href="main-menu.html"><button id="homebtn">Home</button></a>
+            </section>
+
+                <div class="scores"> <!-- This is where the leaderboard is added-->
+                    X's Score =<div class="x-score">0</div>
+                    O's Score =<div class="o-score">0</div>
+                  </div>
+
+        </main>
+    </body>
+</html>

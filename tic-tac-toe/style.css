@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Itim', cursive;
+}
+
+.background {
+    background-color: #12181B;
+    height: 100vh;
+    padding-top: 1px;
+}
+
+.title { /*styles the title of the game, setting the font size and aligning the text to the center */
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+}
+
+.display { /* styles the player display element, setting the font size and aligning the text to the center*/
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.hide { /*sets the display property of an element to none, effectively hiding it*/
+    display: none;
+}
+
+.container { /*styles the container element of the game board, setting its size and the layout of its children elements as a grid with equal rows and columns*/
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+
+}
+
+.tile { /*styles the individual tiles on the board, setting their size, font, and cursor appearance*/
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.playerX {
+    color: #09C372;
+}
+
+.playerO {
+    color: #fb4949;
+} /*classes style the text for each player's symbol, giving them each a different color*/
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+} /*styles the element containing the game controls, aligning its children elements horizontally and vertically*/
+
+.controls button {
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+} /*styles the buttons within the control element, setting their font size and appearance*/
+
+.restart {
+    background-color: #498AFB;
+}
+
+#reset {
+    background-color: #ff8138;
+} /*classes style the restart and reset buttons, respectively, setting their background colors.*/
+
+.scores {
+    font-size: 20px;
+    text-align: center;
+    color: yellow;
+    padding: 2%;
+}
+
+.x-score{
+    padding: 5px;
+}
+
+.o-score{
+    padding: 5px;
+}
+
+#reset-score {
+    background-color: #ff8138;
+}
+
+.objective{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.game-setup{
+
+    padding-bottom: 1%;
+}
+
+.gameplay{
+
+    padding-bottom: 1%;
+}
+
+
+#objh2 {
+    font-size: 40px;
+    color: #fff;
+}
+
+#objp{
+    font-size: 22px;
+    color: #fff;
+}
+
+#gsh2 {
+    font-size: 40px;
+    color: #fff;
+}
+
+#gsp{
+    font-size: 22px;
+    color: #fff;
+}
+
+#gph2 {
+    font-size: 40px;
+    color: #fff;
+}
+
+#gpp{
+    font-size: 22px;
+    color: #fff;
+}
+
+#sh2 {
+    font-size: 40px;
+    color: #fff;
+}
+
+#sp{
+    font-size: 22px;
+    color: #fff;
+}
+
+.buttons{
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+}
+
+#homebtn{
+    background-color: #ff8138;
+}
