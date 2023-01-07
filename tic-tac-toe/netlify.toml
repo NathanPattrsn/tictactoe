@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "/main-menu.html"
+  status = 200
